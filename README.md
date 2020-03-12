@@ -4,10 +4,10 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/FEC-Group-Link/app-preview-info-carousel
+  - https://github.com/FEC-Group-Link/review-component
+  - https://github.com/FEC-Group-Link/similar-component
+  - https://github.com/FEC-Group-Link/app-info-logistics-component
 
 ## Table of Contents
 
