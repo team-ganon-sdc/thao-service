@@ -1,17 +1,36 @@
 {
-  "name": "",
-  "version": "",
+  "name": "app-info-logistics-component",
+  "version": "1.0.0",
   "description": "",
-  "author": "",
-  "license": "",
+  "author": "Anthony Ha",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "nodemon server/index.js",
+    "build": "webpack -d --watch",
+    "db:setup": "node database/seed.js",
+    "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "jest": "^25.1.0",
+    "mongodb": "^3.5.5",
+    "nodemon": "^2.0.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   }
 }

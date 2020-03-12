@@ -1,0 +1,8 @@
+1. Copied all files from HRR FEC repo and put into my service folder.
+
+2. Installed all dependencies I know that I will need.
+  -made sure to differenciate between my devDepen and my regular Depen.
+  -webpack you either need a .babelrc file to hold presets or try to add them in as options in webpack.config.js (not sure which one worked, but did both and webpack was transpiling files correctly after).
+  -webpack needs its webpack.config.js to know where to enter and output its files.
+
+3. Create starting files in server and in client to make sure webpack is transpiling files correctly and server is able to render the files in the client.
