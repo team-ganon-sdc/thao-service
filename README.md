@@ -1,6 +1,6 @@
-# Project Name
+# App Information and Logistics Component
 
-> Project description
+> This component will display all the relevant app information and logistics. It will also allow users to add the current app to their wishlist and ability to install app.
 
 ## Related Projects
 
