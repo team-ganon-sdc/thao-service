@@ -11,7 +11,7 @@ class App extends React.Component {
     }
   }
   handleClick() {
-    console.log(sample.sample)
+    console.log('hi')
   }
 
   render() {
