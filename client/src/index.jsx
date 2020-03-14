@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import sample from '../../database/seed.js'
+
 class App extends React.Component {
   constructor() {
     super();
@@ -8,11 +10,14 @@ class App extends React.Component {
 
     }
   }
+  handleClick() {
+    console.log('hi')
+  }
 
   render() {
     return (
       <div>
-        Hellodf
+        <button onClick={this.handleClick}>Hello</button>
       </div>
     )
   }

@@ -1,8 +1,15 @@
+**make sure to turn on server and webpack at the start of each session.**
+(3/11/2020)
 1. Copied all files from HRR FEC repo and put into my service folder.
-
+(3/12/2020)
 2. Installed all dependencies I know that I will need.
   -made sure to differenciate between my devDepen and my regular Depen.
   -webpack you either need a .babelrc file to hold presets or try to add them in as options in webpack.config.js (not sure which one worked, but did both and webpack was transpiling files correctly after).
   -webpack needs its webpack.config.js to know where to enter and output its files.
 
 3. Create starting files in server and in client to make sure webpack is transpiling files correctly and server is able to render the files in the client.
+
+4. Created a database in database/index.js and the schema and model in database/app.js and the seed.js files uses faker to generate random data points for 100 apps.
+  -running db:setup will run our seed.js file which will create our database in mongo and add the 100 apps.
+(3/13/2020)
+  -made sure our server can retrieve data from database upon http request and respond with app information based on an app id the user inputs
