@@ -18,6 +18,7 @@ class App extends React.Component {
     return (
       <div>
         <button onClick={this.handleClick}>Hello</button>
+        <Info />
       </div>
     )
   }
