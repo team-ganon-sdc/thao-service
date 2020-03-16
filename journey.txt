@@ -12,4 +12,6 @@
 4. Created a database in database/index.js and the schema and model in database/app.js and the seed.js files uses faker to generate random data points for 100 apps.
   -running db:setup will run our seed.js file which will create our database in mongo and add the 100 apps.
 (3/13/2020)
-  -made sure our server can retrieve data from database upon http request and respond with app information based on an app id the user inputs
+  -made sure our server can retrieve data from database upon http request and respond with app information based on an random app id
+(3/16/2020)
+  -made changes to database to include a rating property and fixed tests.
