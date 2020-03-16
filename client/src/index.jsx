@@ -29,7 +29,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Hello</button>
         <Info app={this.state.app}/>
       </div>
     )
