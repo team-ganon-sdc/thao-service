@@ -56,6 +56,8 @@ var addFakerData = function() {
       'https://i.picsum.photos/id/145/600/600.jpg',
   ]
     var randomIndex = Math.floor((Math.random() * 5));
+    var randomVersion = Math.floor(Math.random() * (1000 - 100) + 100) / 100;
+    var randomRating = (Math.floor((Math.random() * 10) + 1))/2;
     var obj = {
       id : i,
       name : faker.commerce.product(),
@@ -65,7 +67,9 @@ var addFakerData = function() {
       updatedAt : faker.date.past(),
       size : faker.random.number() + 'MB',
       editorChoice : faker.random.boolean(),
-      rating: (Math.floor((Math.random() * 10) + 1))/2,
+      rating: randomRating,
+      ratings: faker.random.number(),
+      currentVersion: randomVersion,
       installs : faker.random.number()
     }
     sampleApps.push(obj);

@@ -11,6 +11,8 @@ const appSchema = new mongoose.Schema({
   size : String,
   editorChoice : Boolean,
   rating: Number,
+  ratings: Number,
+  currentVersion: Number,
   installs : Number
 })
 

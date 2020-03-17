@@ -33,6 +33,8 @@ describe ('Database: MongoDB Tests', () => {
             size : expect.any(String),
             editorChoice : expect.any(Boolean),
             rating : expect.any(Number),
+            ratings : expect.any(Number),
+            currentVersion : expect.any(Number),
             installs : expect.any(Number)
           })
         );
