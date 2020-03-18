@@ -14,4 +14,6 @@
 (3/13/2020)
   -made sure our server can retrieve data from database upon http request and respond with app information based on an random app id
 (3/16/2020)
-  -made changes to database to include a rating property and fixed tests.
+  -made changes to database to include a rating property, current version, and # of ratings and fixed tests.
+  -used a css flex box layout to structure my data in react component. things got really messy, so might try a different approach.
+  -split my info component from my main index.jsx component
