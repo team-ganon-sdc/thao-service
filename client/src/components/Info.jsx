@@ -4,12 +4,11 @@ class Info extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editorChoice: ''
+      editorChoice: props
     }
-    this.editorChoiceLogo = this.editorChoiceLogo.bind(this);
   }
-  editorChoiceLogo() {
-    console.log(this.props)
+  componentDidMount() {
+    console.log(this.state)
   }
   render() {
     return (
