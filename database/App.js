@@ -10,6 +10,9 @@ const appSchema = new mongoose.Schema({
   updatedAt : String,
   size : String,
   editorChoice : Boolean,
+  rating: Number,
+  ratings: Number,
+  currentVersion: Number,
   installs : Number
 })
 
