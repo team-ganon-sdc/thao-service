@@ -9,7 +9,8 @@ class App extends React.Component {
     super();
     this.state = {
       app: {},
-      editorsChoice: ''
+      editorsChoiceLogo: '',
+      editorsChoice:''
     }
   }
 
@@ -21,6 +22,15 @@ class App extends React.Component {
           app: res.data[0]
         });
       })
+      .then(()=> {
+        if(this.state.app.editorChoice === true) {
+          this.setState({
+            editorsChoiceLogo:'https://lh3.googleusercontent.com/HotsP0KmK4tn0Q8p9szRXtwjD7fZRKu4mFcfJUFoddrGiZefxY7gz4dEGMuH6HsfCymJP6a8MvAwYWrU=s14-rw',
+            editorsChoice:" Editors' Choice"
+          })
+        }
+        console.log(this.state)
+      })
       .catch(err => {
         if(err) {
           console.log('Error getting data', err);
@@ -31,7 +41,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Info app={this.state.app}/>
+        <Info app={this.state.app} editorsChoiceLogo={this.state.editorsChoiceLogo} editorsChoice={this.state.editorsChoice}/>
       </div>
     )
   }

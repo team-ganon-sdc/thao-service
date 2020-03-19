@@ -4,11 +4,8 @@ class Info extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      app: {}
-    }
-  }
-  componentDidMount() {
 
+    }
   }
 
   render() {
@@ -16,7 +13,7 @@ class Info extends React.Component {
       <div className='info'>
         <img className='image' src={this.props.app.imageUrl}></img>
         <div className='name'>{this.props.app.name}</div>
-        {<div className='editorsChoice'> <img src='https://lh3.googleusercontent.com/HotsP0KmK4tn0Q8p9szRXtwjD7fZRKu4mFcfJUFoddrGiZefxY7gz4dEGMuH6HsfCymJP6a8MvAwYWrU=s14-rw'></img> Editors' Choice</div>}
+        {<div className='editorsChoice'> <img src={this.props.editorsChoiceLogo}></img> {this.props.editorsChoice}</div>}
         <div className='author'>{this.props.app.author}</div>
         <div className='category'> {this.props.app.category}</div>
         <div className='rating'> {this.props.app.rating} {this.props.app.ratings} <img className='personLogo' src='https://lh3.googleusercontent.com/proxy/h3d4YAuruA2cpf0RyIh-94bEwSGd2DBcZkqFNYOlWlReEgqQe-JA5zTT06MoHr26ZTdtX37XRh2PrhROiCg61KDZgG4mbm9NFA5UBhkCuPzS0FJMe9xkMN8JrV3GxOebhy2s3DZF_sPjHA'></img></div>
