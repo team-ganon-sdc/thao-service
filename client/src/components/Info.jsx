@@ -1,56 +1,32 @@
 import React from 'react';
 
+import Star from './Star.jsx';
+
 class Info extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editorChoice: props
+
     }
   }
-  componentDidMount() {
-    console.log(this.state)
-  }
+
   render() {
     return (
       <div className='info'>
-        <div className='image-row'>
         <img className='image' src={this.props.app.imageUrl}></img>
-        </div>
-        <div className='appInfo'>
-            <div className='row0'>
-              <div className='row0item1'>
-                <h1 className='name'>{this.props.app.name}</h1>
-              </div>
-              <div className='row0item2'>
-                <img src='https://lh3.googleusercontent.com/HotsP0KmK4tn0Q8p9szRXtwjD7fZRKu4mFcfJUFoddrGiZefxY7gz4dEGMuH6HsfCymJP6a8MvAwYWrU=s14-rw'></img>
-                <span> Editors' Choice</span>
-              </div>
-            </div>
-            <div className='row1'>
-              <div className='row1item1'>
-                <span className='author'>{this.props.app.author}</span>
-                <span className='category'> {this.props.app.category}</span>
-              </div>
-              <div className='row1item2'>
-                <span className='rating'> {this.props.app.rating}</span>
-              </div>
-            </div>
-            <div className='row2'>
-              <span className='updatedAt'>Updated: {this.props.app.updatedAt}</span>
-            </div>
-            <div className='row3'>
-              <span className='installs'>Installs: {this.props.app.installs}</span>
-              <span className='size'> Size: {this.props.app.size}</span>
-            </div>
-            <div className='row4'>
-              <div className='row4item1'>
-                <div className='wishlist'>Add to Wishlist</div>
-              </div>
-              <div className='row4item2'>
-                <button className='install-button'>Install</button>
-              </div>
-            </div>
-        </div>
+        <div className='name'>{this.props.app.name}</div>
+        {<div className='editorsChoice'> <img src={this.props.editorsChoiceLogo}></img> {this.props.editorsChoice}</div>}
+        <div className='author'>{this.props.app.author}</div>
+        <div className='category'> {this.props.app.category}</div>
+        <Star rating={this.props.app.rating} ratings={this.props.app.ratings}/>
+        <div className='updatedAt'><div className='title'>Updated </div> {this.props.app.updatedAt}</div>
+        <div className='installs'><div className='title'>Installs</div> {this.props.app.installs}</div>
+        <div className='ads'><div className='contains'>Contains Ads</div><img className='caution' src='https://w1.pngwave.com/png/693/31/638/warning-icon-red-triangle-sign-line-signage-traffic-sign-symbol-png-clip-art.png'></img>You don't have any devices.</div>
+        <div className='size'> <div className='title'>Size</div> {this.props.app.size}</div>
+        <div className='currentVersion'><div className='title'>Current Version</div> {this.props.app.currentVersion}</div>
+        <div className='wishlist'><img className='wishlistLogo' src='https://cdn0.iconfinder.com/data/icons/mix-of-simple-vol-4/57/02-512.png'></img>Add to Wishlist</div>
+        <button className='install-button'>Install</button>
+        <div className='add-info'> <u>Additional Information</u></div>
       </div>
     )
   }
