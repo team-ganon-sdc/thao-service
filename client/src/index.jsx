@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 import Info from './components/Info.jsx';
+import Star from './components/Star.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -29,7 +30,6 @@ class App extends React.Component {
             editorsChoice:" Editors' Choice"
           })
         }
-        console.log(this.state)
       })
       .catch(err => {
         if(err) {

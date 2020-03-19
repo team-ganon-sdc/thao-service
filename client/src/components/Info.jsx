@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Star from './Star.jsx';
+
 class Info extends React.Component {
   constructor(props) {
     super(props);
@@ -16,7 +18,7 @@ class Info extends React.Component {
         {<div className='editorsChoice'> <img src={this.props.editorsChoiceLogo}></img> {this.props.editorsChoice}</div>}
         <div className='author'>{this.props.app.author}</div>
         <div className='category'> {this.props.app.category}</div>
-        <div className='rating'> {this.props.app.rating} {this.props.app.ratings} <img className='personLogo' src='https://lh3.googleusercontent.com/proxy/h3d4YAuruA2cpf0RyIh-94bEwSGd2DBcZkqFNYOlWlReEgqQe-JA5zTT06MoHr26ZTdtX37XRh2PrhROiCg61KDZgG4mbm9NFA5UBhkCuPzS0FJMe9xkMN8JrV3GxOebhy2s3DZF_sPjHA'></img></div>
+        <Star rating={this.props.app.rating} ratings={this.props.app.ratings}/>
         <div className='updatedAt addInfo'><div className='title'>Updated </div> {this.props.app.updatedAt}</div>
         <div className='installs addInfo'><div className='title'>Installs</div> {this.props.app.installs}</div>
         <div className='ads'><div className='contains'>Contains Ads</div><img className='caution' src='https://w1.pngwave.com/png/693/31/638/warning-icon-red-triangle-sign-line-signage-traffic-sign-symbol-png-clip-art.png'></img>You don't have any devices.</div>
