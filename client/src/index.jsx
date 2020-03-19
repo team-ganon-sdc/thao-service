@@ -8,9 +8,11 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      app: {}
+      app: {},
+      editorsChoice: ''
     }
   }
+
   componentDidMount() {
     var random = Math.floor(Math.random() * 100) + 1;
     axios.get(`/apps/${random}`)
