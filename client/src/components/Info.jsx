@@ -19,10 +19,10 @@ const Info = function(props) {
       <div className='editorsChoice'> <img src={editorsChoiceLogo}></img> {editorsChoice}</div>
       <div className='author'>{props.app.author}</div>
       <div className='category'> {props.app.category}</div>
-      <Rating rating={props.app.rating} ratings={props.app.ratings}/>
       <div className='ads'><div className='contains'>Contains Ads</div><img className='caution' src='https://w1.pngwave.com/png/693/31/638/warning-icon-red-triangle-sign-line-signage-traffic-sign-symbol-png-clip-art.png'></img>You don't have any devices.</div>
       <div className='wishlist'><img className='wishlistLogo' src='https://cdn0.iconfinder.com/data/icons/mix-of-simple-vol-4/57/02-512.png'></img>Add to Wishlist</div>
       <button className='install-button'>Install</button>
+      <Rating rating={props.app.rating} ratings={props.app.ratings}/>
       <AdditionalInfo size={props.app.size} currentVersion={props.app.currentVersion} installs={props.app.installs} updatedAt={props.app.updatedAt}/>
     </div>
   )
