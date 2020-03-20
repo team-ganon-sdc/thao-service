@@ -26,7 +26,7 @@ const Info = function(props) {
       <div className='currentVersion'><div className='title'>Current Version</div> {props.app.currentVersion}</div>
       <div className='wishlist'><img className='wishlistLogo' src='https://cdn0.iconfinder.com/data/icons/mix-of-simple-vol-4/57/02-512.png'></img>Add to Wishlist</div>
       <button className='install-button'>Install</button>
-      <div className='add-info'> <u>Additional Information</u></div>
+      <div className='add-info'> ADDITIONAL INFORMATION</div>
     </div>
   )
 }
