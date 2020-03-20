@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 
 import Info from './components/Info.jsx';
-import Star from './components/Star.jsx';
+import Rating from './components/Rating.jsx';
 
 class App extends React.Component {
   constructor() {

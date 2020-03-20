@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
 import { FaStarHalfAlt } from 'react-icons/fa';
 
-const Star = function(props) {
+const Rating = function(props) {
   var stars = props.rating;
   var starsArray= [];
 
@@ -37,4 +37,4 @@ const Star = function(props) {
   )
 }
 
-export default Star;
+export default Rating;

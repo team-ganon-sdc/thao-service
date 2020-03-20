@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Star from './Star.jsx';
+import Rating from './Rating.jsx';
 
 const Info = function(props) {
   var editorsChoiceLogo = '';
@@ -18,7 +18,7 @@ const Info = function(props) {
       <div className='editorsChoice'> <img src={editorsChoiceLogo}></img> {editorsChoice}</div>
       <div className='author'>{props.app.author}</div>
       <div className='category'> {props.app.category}</div>
-      <Star rating={props.app.rating} ratings={props.app.ratings}/>
+      <Rating rating={props.app.rating} ratings={props.app.ratings}/>
       <div className='updatedAt'><div className='title'>Updated </div> {props.app.updatedAt}</div>
       <div className='installs'><div className='title'>Installs</div> {props.app.installs}</div>
       <div className='ads'><div className='contains'>Contains Ads</div><img className='caution' src='https://w1.pngwave.com/png/693/31/638/warning-icon-red-triangle-sign-line-signage-traffic-sign-symbol-png-clip-art.png'></img>You don't have any devices.</div>
