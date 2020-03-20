@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import Info from './components/Info.jsx';
 import Rating from './components/Rating.jsx';
+import AdditionalInfo from './components/AdditionalInfo.jsx';
 
 class App extends React.Component {
   constructor() {
