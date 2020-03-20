@@ -5,7 +5,6 @@ import { FaStarHalfAlt } from 'react-icons/fa';
 
 const Star = function(props) {
   var stars = props.rating;
-  console.log(stars)
   var starsArray= [];
 
   for(var i = 0; i < Math.floor(stars); i++) {
