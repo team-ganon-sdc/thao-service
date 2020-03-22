@@ -26,6 +26,8 @@ app.get('/apps/:appid', (req, res) => {
     })
 })
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
+
+module.exports = server;
