@@ -35,5 +35,8 @@ From within the root directory:
 ```sh
 npm install -g webpack
 npm install
+npm run start (will start up server)
+npm run bulid (will start of webpack to compile your react files into a bundle.js)
+npm run db:setup (will seed your database with 100 apps)
 ```
 
