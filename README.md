@@ -17,8 +17,8 @@
 
 ## Usage
 
-npm run start (will start up server)
-npm run bulid (will start of webpack to compile your react files into a bundle.js)
+npm run start (will start up server)\n
+npm run bulid (will start of webpack to compile your react files into a bundle.js)\n
 npm run db:setup (will seed your database with 100 apps)
 
 ## Requirements
