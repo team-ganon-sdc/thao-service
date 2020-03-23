@@ -17,3 +17,8 @@
   -made changes to database to include a rating property, current version, and # of ratings and fixed tests.
   -used a css flex box layout to structure my data in react component. things got really messy, so might try a different approach.
   -split my info component from my main index.jsx component
+(3/17/2020-3/22/2020)
+  -switched from flexbox layout to css grid layout which made it alot easier to organize all of my data points. (this process took a long time)
+  -split rating compoennt and additional info compoennt from info component to clean up and organize code a little better
+  -added implementation of the review stars to reflect rating of app and editors choice to reflect if the app was an editors' choice
+  -created tests for server and client
