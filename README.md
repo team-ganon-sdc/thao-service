@@ -16,11 +16,11 @@
 1. [Development](#development)
 
 ## Usage
-
-npm run start (will start up server)\n
-npm run bulid (will start of webpack to compile your react files into a bundle.js)\n
+```sh
+npm run start (will start up server)
+npm run bulid (will start of webpack to compile your react files into a bundle.js)
 npm run db:setup (will seed your database with 100 apps)
-
+```
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
