@@ -1,41 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import axios from 'axios';
-
-import Info from './components/Info.jsx';
-import Rating from './components/Rating.jsx';
-import AdditionalInfo from './components/AdditionalInfo.jsx';
-
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      app: {},
-    }
-  }
-
-  componentDidMount() {
-    var random = Math.floor(Math.random() * 100) + 1;
-    axios.get(`/apps/${random}`)
-      .then(res => {
-        this.setState({
-          app: res.data[0]
-        });
-      })
-      .catch(err => {
-        if(err) {
-          console.log('Error getting data', err);
-        }
-      })
-  }
-
-  render() {
-    return (
-      <div>
-        <Info app={this.state.app} />
-      </div>
-    )
-  }
-}
+import App from './components/App.jsx';
 
 ReactDOM.render(<App />, document.getElementById('root'));
