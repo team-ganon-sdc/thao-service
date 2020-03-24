@@ -7,16 +7,15 @@ import Rating from './Rating.jsx';
 import AdditionalInfo from './AdditionalInfo.jsx';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       app: {},
     }
   }
 
   componentDidMount() {
-    var random = Math.floor(Math.random() * 100) + 1;
-    axios.get(`/apps/${random}`)
+    axios.get(`/apps/${this.props.id}`)
       .then(res => {
         this.setState({
           app: res.data[0]
