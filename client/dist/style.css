@@ -105,7 +105,8 @@ h1 {
   height:16px;
   width:16px;
 }
-.rating {
+
+.rating-me {
   grid-area: rating;
   justify-self: end;
   color: #8d8d8d;

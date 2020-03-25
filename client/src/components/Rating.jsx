@@ -24,7 +24,7 @@ const Rating = function(props) {
   }
 
   return(
-    <div className='rating'>
+    <div className='rating-me'>
       <span className='stars'>
         {starsArray.map((star, i) =>
           <span key={i}>
