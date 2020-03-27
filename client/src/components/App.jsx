@@ -11,11 +11,12 @@ class App1 extends React.Component {
     super(props);
     this.state = {
       app: {},
+      id: this.props.id || 1
     }
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3004/apps/${this.props.id}`)
+    axios.get(`http://localhost:3004/apps/${this.state.id}`)
       .then(res => {
         this.setState({
           app: res.data[0]

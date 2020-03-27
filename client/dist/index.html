@@ -12,8 +12,11 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script type="text/javascript" src="bundle.js"></script>
     <script>
+      let url = new URL(window.location);
+      let params = new URLSearchParams(url.search);
+      let id = params.get('id')
       ReactDOM.render(
-        React.createElement(App1, {id: '1'}, null),
+        React.createElement(App1, {id} , null),
         document.getElementById('root')
       )
     </script>
