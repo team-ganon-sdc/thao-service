@@ -66,3 +66,5 @@
     -made the same changes that I made to my client on my local comp to the ec2 from above^
     -also made the way I sent my axios get request to be relative, as well as the way my server responds to get requests as relative
       -ex. in client axios get request `/apps/${this.state.id}`
+
+  deployed service now works and renders the service!!
