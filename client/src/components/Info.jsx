@@ -7,8 +7,6 @@ const Info = function(props) {
   var editorsChoiceLogo = '';
   var editorsChoice = '';
 
-  console.log(props.app.editorChoice);
-
   if (props.app.editorChoice === true) {
     editorsChoiceLogo = 'https://lh3.googleusercontent.com/HotsP0KmK4tn0Q8p9szRXtwjD7fZRKu4mFcfJUFoddrGiZefxY7gz4dEGMuH6HsfCymJP6a8MvAwYWrU=s14-rw';
     editorsChoice = " Editors' Choice";
