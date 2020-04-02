@@ -78,7 +78,8 @@ var addFakerData = function() {
 
 const insertSampleApps = function() {
   App.create(sampleApps)
-    .then(() => db.disconnect());
+    .then(() => console.log('successfully loaded data'))
+    .catch(err => console.log(err));
 };
 
 insertSampleApps();

@@ -10,7 +10,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
-    "db:setup": "node database/seed.js",
+    "seed": "node ./database/seed.js",
     "test": "jest"
   },
   "dependencies": {
@@ -44,6 +44,8 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "setupFiles": ["./spec/setupTests.js"]
+    "setupFiles": [
+      "./spec/setupTests.js"
+    ]
   }
 }
