@@ -18,10 +18,9 @@ class App1 extends React.Component {
   componentDidMount() {
       axios.get(`http://localhost:3004/apps/${this.state.id}`)
         .then(res => {
-          console.log(res.data)
-          // this.setState({
-          //   app: res.data[0]
-          // });
+          this.setState({
+            app: res.data[0]
+          });
         })
         .catch(err => {
           if(err) {
