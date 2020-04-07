@@ -11,8 +11,9 @@
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
     "seed": "node ./database/seed.js",
-    "sqlSeed": "node ./database/postgresSeed.js",
-    "test": "jest"
+    "sqlSeed": "node ./database/postgres/postgresSeed.js",
+    "test": "jest",
+    "sqlLoad": "node ./database/postgres/loadData.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -21,6 +22,8 @@
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.4",
     "nodemon": "^2.0.2",
+    "pg": "8.0.0",
+    "pg-copy-streams": "2.2.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-icons": "^3.9.0"
