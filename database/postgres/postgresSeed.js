@@ -50,7 +50,8 @@ const images = [
   'https://i.picsum.photos/id/145/600/600.jpg',
 ];
 
-const writeData = fs.createWriteStream('dataSQL.csv');
+const writeData = fs.createWriteStream('./database/postgres/dataSQL.csv');
+writeData.write('id,name,author,imageUrl,category,updatedAt,size,editorChoice,rating,ratings,currentVersion,install\n', 'utf8');
 
 function generateData(writer, encoding, callback) {
   let i = 10000000;

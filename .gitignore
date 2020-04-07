@@ -25,3 +25,6 @@ build/
 client/dist/bundle.js
 
 spec/__snapshots__
+
+config.json
+dataSQL.csv
