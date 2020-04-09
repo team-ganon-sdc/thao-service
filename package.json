@@ -12,13 +12,17 @@
     "build": "webpack -d --watch",
     "seed": "node ./database/seed.js",
     "sqlSeed": "node ./database/postgres/postgresSeed.js",
+    "casSeed": "node ./database/cassandra/casSeed.js",
     "test": "jest",
-    "sqlLoad": "node ./database/postgres/loadData.js"
+    "sqlLoad": "node ./database/postgres/loadData.js",
+    "casLoad": "node ./database/cassandra/loadData.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
+    "cassandra-driver": "^4.5.0",
     "express": "^4.17.1",
+    "express-cassandra": "^2.3.2",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.4",
     "nodemon": "^2.0.2",
