@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('../database/index.js');
-const App = require('../database/App.js');
+const casClient = require('../database/cassandra/index.js');
 
 const app = express();
 const PORT = 3004;
@@ -18,58 +17,51 @@ app.use(function(req, res, next) {
 });
 
 app.get('/apps/:appid', (req, res) => {
-  App.find(
-    {id: req.params.appid})
-  .then(
-    data => {
-      res.send(data);
-    })
-  .catch(
-    err => {
-      if(err) {
-        console.log(err);
-      }
-    })
+  const query = `SELECT * FROM sdcmodel WHERE id = ${req.params.appid}`;
+
+  casClient.execute(query)
+  .then(result => res.send(result.rows))
+  .catch(err => console.error(err))
 })
 
-app.post('/apps', (req, res) => {
-  App.create([req.body])
-  .then( () => {
-    res.status(200).send(`Successfully added id ${req.body.id}`)
-  })
-  .catch(err => {
-    if(err) {
-      console.log(err)
-    }
-  })
-})
+// app.post('/apps', (req, res) => {
+//   App.create([req.body])
+//   .then( () => {
+//     res.status(200).send(`Successfully added id ${req.body.id}`)
+//   })
+//   .catch(err => {
+//     if(err) {
+//       console.log(err)
+//     }
+//   })
+// })
 
-app.put('/apps', (req, res) => {
-  App.findOneAndUpdate({id: req.body.id}, req.body)
-  .then( () => {
-    res.status(200).send(`Successfully updated id ${req.body.id}`)
-  })
-  .catch(err => {
-    if(err) {
-      console.log(err)
-    }
-  })
-})
+// app.put('/apps', (req, res) => {
+//   App.findOneAndUpdate({id: req.body.id}, req.body)
+//   .then( () => {
+//     res.status(200).send(`Successfully updated id ${req.body.id}`)
+//   })
+//   .catch(err => {
+//     if(err) {
+//       console.log(err)
+//     }
+//   })
+// })
 
-app.delete('/apps/:appid', (req, res) => {
-  App.deleteOne(
-    {id: req.params.appid})
-  .then(
-    data => {
-      res.send(data);
-    })
-  .catch(
-    err => {
-      if(err) {
-        console.log(err);
-      }
-    })
-})
+// app.delete('/apps/:appid', (req, res) => {
+//   App.deleteOne(
+//     {id: req.params.appid})
+//   .then(
+//     data => {
+//       res.send(data);
+//     })
+//   .catch(
+//     err => {
+//       if(err) {
+//         console.log(err);
+//       }
+//     })
+// })
 
 
 const server = app.listen(PORT, () => {
