@@ -28,3 +28,4 @@ spec/__snapshots__
 
 config.json
 dataSQL.csv
+newrelic.js

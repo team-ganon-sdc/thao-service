@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 const bodyParser = require('body-parser');
 const pool = require('../database/postgres/index.js');
@@ -19,7 +20,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/apps/:appid', (req, res) => {
-  pool.query(`SELECT * FROM ${table} WHERE id=${req.params.appid};`, (err, data) => {
+  pool.query(`SELECT * FROM ${table} WHERE id=${req.params.appid}`, (err, data) => {
     if (err) {
       console.error(err)
     }
@@ -27,17 +28,19 @@ app.get('/apps/:appid', (req, res) => {
   })
 })
 
-// app.post('/apps', (req, res) => {
-//   App.create([req.body])
-//   .then( () => {
-//     res.status(200).send(`Successfully added id ${req.body.id}`)
-//   })
-//   .catch(err => {
-//     if(err) {
-//       console.log(err)
-//     }
-//   })
-// })
+app.post('/apps', (req, res) => {
+
+  let text = `INSERT INTO ${table}(id, name, author, imageurl, category, updatedat, size, editorchoice, rating, ratings, currentversion, installs) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *`;
+
+  let values = [req.body.id, req.body.name, req.body.author, req.body.imageurl, req.body.category, req.body.updatedat, req.body.size, req.body.editorchoice, req.body.rating, req.body.ratings, req.body.currentversion, req.body.installs];
+
+  pool.query(text, values, (err, data) => {
+    if (err) {
+      console.error(err)
+    }
+    res.send(data.rows[0]);
+  })
+})
 
 // app.put('/apps', (req, res) => {
 //   App.findOneAndUpdate({id: req.body.id}, req.body)
@@ -51,20 +54,14 @@ app.get('/apps/:appid', (req, res) => {
 //   })
 // })
 
-// app.delete('/apps/:appid', (req, res) => {
-//   App.deleteOne(
-//     {id: req.params.appid})
-//   .then(
-//     data => {
-//       res.send(data);
-//     })
-//   .catch(
-//     err => {
-//       if(err) {
-//         console.log(err);
-//       }
-//     })
-// })
+app.delete('/apps/:appid', (req, res) => {
+  pool.query(`DELETE FROM ${table} WHERE id=${req.params.appid} RETURNING *`, (err, data) => {
+    if (err) {
+      console.error(err)
+    }
+    res.send(data.rows[0]);
+  })
+})
 
 
 const server = app.listen(PORT, () => {

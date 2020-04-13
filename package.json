@@ -25,6 +25,7 @@
     "express-cassandra": "^2.3.2",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.4",
+    "newrelic": "^6.5.0",
     "nodemon": "^2.0.2",
     "pg": "8.0.0",
     "pg-copy-streams": "2.2.2",

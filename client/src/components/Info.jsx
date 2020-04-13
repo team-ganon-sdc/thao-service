@@ -12,8 +12,6 @@ const Info = function(props) {
     editorsChoice = " Editors' Choice";
   }
 
-  console.log(props.app);
-
   return (
     <div className='info'>
       <img className='image' src={props.app.imageurl}></img>
