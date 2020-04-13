@@ -30,7 +30,7 @@ app.get('/apps/:appid', (req, res) => {
 
 app.post('/apps', (req, res) => {
 
-  let text = `INSERT INTO ${table}(id, name, author, imageurl, category, updatedat, size, editorchoice, rating, ratings, currentversion, installs) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *`;
+  let text = `INSERT INTO ${table}(id, name, author, imageurl, category, updatedat, size, editorchoice, rating, ratings, currentversion, installs) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) ON CONFLICT (id) DO NOTHING`;
 
   let values = [req.body.id, req.body.name, req.body.author, req.body.imageurl, req.body.category, req.body.updatedat, req.body.size, req.body.editorchoice, req.body.rating, req.body.ratings, req.body.currentversion, req.body.installs];
 

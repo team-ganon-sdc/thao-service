@@ -1,13 +1,33 @@
 config:
   target: "http://localhost:3004"
   phases:
-    - duration: 20
+    - duration: 10
       arrivalRate: 1000
   processor: "./artilleryFunc.js"
 
+# scenarios:
+#   - name: "Get ID"
+#     flow:
+#       - function: "generateRandomID"
+#       - get:
+#           url: "/?id={{ id }}"
+
 scenarios:
-  - name: "Get ID"
+  - name: "Post new data"
     flow:
       - function: "generateRandomData"
-      - get:
-          url: "/?id={{ id }}"
+      - post:
+          url: "/apps"
+          json:
+            id: "{{ id }}"
+            name: "{{ name }}"
+            author: "{{ author }}"
+            imageurl: "{{ imageurl }}"
+            category: "{{ category }}"
+            updatedat: "{{ updatedat }}"
+            size: "{{ size }}"
+            editorchoice: "{{ editorchoice }}"
+            rating: "{{ rating }}"
+            ratings: "{{ ratings }}"
+            currentversion: "{{ currentversion }}"
+            installs: "{{ installs }}"
