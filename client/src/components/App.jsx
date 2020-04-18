@@ -16,7 +16,7 @@ class App1 extends React.Component {
   }
 
   componentDidMount() {
-      axios.get(`http://3.16.166.227:3004/apps/${this.state.id}`)
+      axios.get(`http://18.223.160.252:3004/apps/${this.state.id}`)
         .then(res => {
           this.setState({
             app: res.data[0]
