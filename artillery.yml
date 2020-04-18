@@ -5,12 +5,12 @@ config:
       arrivalRate: 1000
   processor: "./artilleryFunc.js"
 
-# scenarios:
-#   - name: "Get ID"
-#     flow:
-#       - function: "generateRandomID"
-#       - get:
-#           url: "/?id={{ id }}"
+scenarios:
+  - name: "Get ID"
+    flow:
+      - function: "generateRandomID"
+      - get:
+          url: "/?id={{ id }}"
 
 scenarios:
   - name: "Post new data"
