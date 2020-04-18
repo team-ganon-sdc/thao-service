@@ -63,7 +63,7 @@ app.delete('/apps/:appid', (req, res) => {
   })
 })
 
-app.get('/app.js', cors(), function (req, res) {
+app.get('/app.js', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/dist/bundle.js'))
 });
 
