@@ -63,6 +63,9 @@ app.delete('/apps/:appid', (req, res) => {
   })
 })
 
+app.get('/app.js', cors(), function (req, res) {
+  res.sendFile(path.join(__dirname, '../client/dist/bundle.js'))
+});
 
 const server = app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
